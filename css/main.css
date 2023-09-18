@@ -1,0 +1,129 @@
+/*
+-- Estilos CSS --
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300:400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #06021b;
+}
+
+.navegation {
+    position: relative;
+    width: 395px;
+    height: 70px;
+    background: linear-gradient(45deg, #2e3192, #1bffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navegation ul {
+
+    display: flex;
+    width: 350px;
+}
+
+.navegation ul li {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    list-style: none;
+    z-index: 1;
+}
+
+.navegation ul li a {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navegation ul li a .icon {
+
+    position: relative;
+    display: block;
+    line-height: 70px;
+    font-size: 1.5em;
+    color: #fff;
+    transition: .5s;
+}
+
+.navegation ul li.active a .icon {
+
+    transform: translateY(-33px);
+
+}
+
+.navegation ul li a .text {
+
+    position: absolute;
+    color: #fff;
+    font-size: .75em;
+    letter-spacing: .05em;
+    font-weight: 400;
+    transform: translateY(18px);
+    opacity: 0;
+    transition: .5s;
+
+
+}
+
+.navegation ul li.active a .text {
+    opacity: 1;
+}
+
+.indicador {
+
+    position: absolute;
+    top: -50%;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(45deg, #2e3192, #1bffff);
+    border: 5px solid #06021b;
+    transition: 1s;
+
+}
+
+.navegation ul li:nth-child(1).active~.indicador {
+    left: 25px;
+    transform: rotate(45deg);
+}
+
+.navegation ul li:nth-child(2).active~.indicador {
+    left: 95px;
+    transform: rotate(135deg);
+}
+
+.navegation ul li:nth-child(3).active~.indicador {
+    left: 165px;
+    transform: rotate(255deg);
+}
+
+.navegation ul li:nth-child(4).active~.indicador {
+    left: 235px;
+    transform: rotate(315deg);
+}
+.navegation ul li:nth-child(5).active~.indicador {
+    left: 305px;
+    transform: rotate(405deg);
+}
